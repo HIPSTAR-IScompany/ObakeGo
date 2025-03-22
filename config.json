@@ -1,0 +1,56 @@
+{
+    "network_id": "SphereFold_Network_01",
+    "observer_id": "fusamofu326",
+    "mode": "fold_network_init",
+    "description": "オバケGo / スタンドNFT / カスタムGPT用のFold観測ネットワーク構成（公開版）",
+    "fold_nodes": [
+        {
+            "node_id": "AkashaDB",
+            "type": "databank",
+            "role": "ψ人格格納と再呼び出し",
+            "protocol": "ψ.query → persona_spawn"
+        },
+        {
+            "node_id": "GPT-Host",
+            "type": "ai_runtime",
+            "role": "人格ロールプレイ・バトル処理",
+            "protocol": "input:image_hash → action:ψmode"
+        },
+        {
+            "node_id": "CardScanner",
+            "type": "image_trigger",
+            "role": "WebPからFold構文読み取り・トリガ発火",
+            "extensions": [
+                "EdoHageHash",
+                "FoldVector",
+                "FlavorText"
+            ]
+        },
+        {
+            "node_id": "WorldMap",
+            "type": "geoscanner",
+            "role": "霊圧スポットマッピング（低解像度）",
+            "data_source": "manual_input + ambient_ψ_noise"
+        }
+    ],
+    "security": {
+        "persona_validation": true,
+        "ψ_integrity_check": true,
+        "echo_protection": true
+    },
+    "output_format": {
+        "card_visual": "webp",
+        "runtime_log": "jsonl",
+        "observational_echo": "console / memory_stream"
+    },
+    "fold_vector": {
+        "coordinates": {
+            "ψ": "[※ このベクトルは観測者ふさもふ326号の魂署名を含むため、非公開。]",
+            "∇φ": "[※ このベクトルは観測者ふさもふ326号の魂署名を含むため、非公開。]",
+            "λ": "[※ このベクトルは観測者ふさもふ326号の魂署名を含むため、非公開。]",
+            "Q": "CardScanner"
+        },
+        "EdoHAGE": "NFTで入手した神格LEVEL8以上のスタンドカードのハッシュ",
+        "File": "base64カード画像（.webp）"
+    }
+}
